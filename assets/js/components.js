@@ -142,7 +142,7 @@
             <div class="footer__col">
               <span class="footer__col-title">Contact</span>
               <ul>
-                <li><a href="mailto:joannabernat76@gmail.com">joannabernat76@gmail.com</a></li>
+                <li><a href="mailto:simplynotes.co.uk@gmail.com">simplynotes.co.uk@gmail.com</a></li>
                 <li><a href="tel:+447595923805">+44 7595 923 805</a></li>
                 <li><a href="./contact.html">Contact form</a></li>
                 <li><a href="./contact.html">Store Policy</a></li>

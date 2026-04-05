@@ -26,12 +26,10 @@
   <section class="section section--light">
     <div class="container">
 
-      <!-- Coming Soon / Purchase notice -->
-      <div class="promo-banner" style="margin-bottom:2rem;">
-        <div class="promo-banner__icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <p>Online purchasing is coming soon. In the meantime, browse the full collection at <a href="https://www.simplynotes.co.uk" target="_blank" rel="noopener noreferrer" style="color:var(--color-navy);text-decoration:underline;">simplynotes.co.uk</a> or find Joanna's books on <a href="./books.html" style="color:var(--color-navy);text-decoration:underline;">Amazon</a>.</p>
+      <!-- Stripe info strip -->
+      <div style="display:flex;align-items:center;gap:.75rem;padding:.875rem 1.125rem;background:var(--color-sand);border:0.5px solid var(--color-gold);border-radius:4px;margin-bottom:1.75rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <p style="font-size:.75rem;font-weight:500;color:#785A10;margin:0;">Secure checkout via Stripe · Instant PDF delivery after payment · Card, Apple Pay &amp; Google Pay accepted</p>
       </div>
 
       <!-- Filter bar -->
@@ -43,79 +41,103 @@
         <button class="filter-btn" data-level="Advanced">Advanced</button>
       </div>
 
-      <!-- Full product catalogue (static) -->
+      <!-- Product catalogue -->
       <div class="product-grid" id="catalogue">
 
         <article class="product-card" data-level="Elementary">
           <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/6162PFqbYnL._SY425_.jpg" alt="My Favourite Piano Adventures Book 1 — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+            <img src="https://m.media-amazon.com/images/I/6162PFqbYnL._SY425_.jpg" alt="My Favourite Piano Adventures Book 1 — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <h3 class="product-card__title">My Favourite Piano Adventures Book 1</h3>
           <p class="product-card__meta">Elementary · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
         <article class="product-card" data-level="Elementary">
-          <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/617OjVaoeJL._SY425_.jpg" alt="Rhythm Explorers Book 1 — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+          <div class="product-card__cover product-card__cover--placeholder" style="background:#EEF4EE;">
+            <div class="product-card__cover-inner"><div class="product-card__cover-title" style="color:#2A5A30">My Favourite Piano Adventures Book 2</div><div class="product-card__cover-rule"></div><div class="product-card__cover-sub" style="color:#2A5A30">PDF</div></div>
+          </div>
           <h3 class="product-card__title">My Favourite Piano Adventures Book 2</h3>
           <p class="product-card__meta">Elementary · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
         <article class="product-card" data-level="Beginner">
           <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/71LK4WCy8+L._SY425_.jpg" alt="Piano Fun with Philip the Cat Book 1 — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+            <img src="https://m.media-amazon.com/images/I/617OjVaoeJL._SY425_.jpg" alt="Rhythm Explorers Book 1 — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <h3 class="product-card__title">Rhythm Explorers Book 1</h3>
           <p class="product-card__meta">Beginner · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
         <article class="product-card" data-level="Elementary">
           <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/61CIKdsmjmL._SY425_.jpg" alt="My First Book of Sight Reading — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+            <img src="https://m.media-amazon.com/images/I/71LK4WCy8+L._SY425_.jpg" alt="Piano Fun with Philip the Cat Book 1 — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <h3 class="product-card__title">Piano Fun with Philip the Cat Book 1</h3>
           <p class="product-card__meta">Elementary · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
         <article class="product-card" data-level="Intermediate">
           <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/61-EVMT8X5L._SY425_.jpg" alt="My First Quavers — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+            <img src="https://m.media-amazon.com/images/I/61CIKdsmjmL._SY425_.jpg" alt="My First Book of Sight Reading — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <h3 class="product-card__title">My First Book of Sight Reading</h3>
           <p class="product-card__meta">Intermediate · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
         <article class="product-card" data-level="Beginner">
           <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/61-EVMT8X5L._SY425_.jpg" alt="My First Quavers — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+            <img src="https://m.media-amazon.com/images/I/61-EVMT8X5L._SY425_.jpg" alt="My First Quavers — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <h3 class="product-card__title">My First Quavers</h3>
           <p class="product-card__meta">Beginner · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
         <article class="product-card" data-level="Beginner">
           <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/61Mq89PqzeL._SY425_.jpg" alt="My First Exercises in Eurhythmics — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+            <img src="https://m.media-amazon.com/images/I/61Mq89PqzeL._SY425_.jpg" alt="My First Exercises in Eurythmics — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <h3 class="product-card__title">My First Exercises in Eurythmics</h3>
           <p class="product-card__meta">Beginner · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
-        <article class="product-card" data-level="Intermediate">
+        <article class="product-card" data-level="Beginner">
           <div class="product-card__cover">
-          <img src="https://m.media-amazon.com/images/I/61nnQOOdhIL._SY425_.jpg" alt="Nursery Songs — Easiest Arrangements on Glockenspiel — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+            <img src="https://m.media-amazon.com/images/I/61nnQOOdhIL._SY425_.jpg" alt="Nursery Songs — Easiest Arrangements on Glockenspiel — Joanna Bernat" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <h3 class="product-card__title">Nursery Songs — Easiest Arrangements on Glockenspiel</h3>
           <p class="product-card__meta">Beginner · PDF Download</p>
-          <div class="product-card__footer"><span class="product-card__price">£3.20</span></div>
+          <div class="product-card__footer">
+            <span class="product-card__price">£3.20</span>
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" class="btn btn-red" target="_blank" rel="noopener noreferrer" style="padding:.4rem .875rem;font-size:.5625rem">Buy PDF →</a>
+          </div>
         </article>
 
       </div><!-- .product-grid -->
