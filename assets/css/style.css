@@ -400,6 +400,7 @@ p { font-size: 0.875rem; color: var(--color-grey); line-height: 1.8; }
 
 .product-card__cover {
     aspect-ratio: 2 / 3;
+    max-height: 220px;
     margin-bottom: 0.75rem;
     display: flex;
     align-items: center;
@@ -499,6 +500,7 @@ p { font-size: 0.875rem; color: var(--color-grey); line-height: 1.8; }
 .book-card { text-align: center; }
 .book-card__cover {
     aspect-ratio: 2 / 3;
+    max-height: 260px;
     margin-bottom: 0.75rem;
     overflow: hidden;
     position: relative;
