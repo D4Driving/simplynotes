@@ -396,7 +396,7 @@ p { font-size: 0.875rem; color: var(--color-grey); line-height: 1.8; }
 .product-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
 
 .product-card__cover {
-    height: 160px;
+    aspect-ratio: 2 / 3;
     margin-bottom: 0.75rem;
     display: flex;
     align-items: center;
@@ -404,7 +404,7 @@ p { font-size: 0.875rem; color: var(--color-grey); line-height: 1.8; }
     overflow: hidden;
     position: relative;
 }
-.product-card__cover img { width: 100%; height: 100%; object-fit: cover; }
+.product-card__cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .product-card__cover--placeholder {
     border: 0.5px solid #D0CAC0;
@@ -495,12 +495,12 @@ p { font-size: 0.875rem; color: var(--color-grey); line-height: 1.8; }
 }
 .book-card { text-align: center; }
 .book-card__cover {
-    height: 190px;
+    aspect-ratio: 2 / 3;
     margin-bottom: 0.75rem;
     overflow: hidden;
     position: relative;
 }
-.book-card__cover img { width: 100%; height: 100%; object-fit: cover; }
+.book-card__cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .book-card__cover--placeholder {
     display: flex;
     flex-direction: column;
