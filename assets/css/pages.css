@@ -358,3 +358,40 @@
 .page-404 h1 { font-size: 1.375rem; margin-bottom: .75rem; }
 .page-404 p  { max-width: 360px; margin: 0 auto 1.75rem; }
 .page-404__links { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+
+/* ── Pastel Dreams track list ───────────────────────── */
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.track-row {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  background: #fff;
+  padding: .625rem .875rem;
+  border: 0.5px solid #D0CAC0;
+  border-radius: var(--radius-sm);
+}
+.track-row__num {
+  font-size: .625rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  flex: 0 0 22px;
+}
+.track-row__title {
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  flex: 1;
+}
+.track-row__player {
+  flex: 0 0 200px;
+  height: 28px;
+  accent-color: var(--color-red);
+}
+@media (max-width: 600px) {
+  .track-row { flex-wrap: wrap; }
+  .track-row__player { flex: 0 0 100%; margin-top: .375rem; }
+}
