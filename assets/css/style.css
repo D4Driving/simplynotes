@@ -763,3 +763,32 @@ p { font-size: 0.875rem; color: var(--color-grey); line-height: 1.8; }
 @media print {
     .site-header, .site-footer, .btn, .nav-toggle { display: none !important; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   MAILERLITE EMBED — CSS ISOLATION
+   Prevents our form styles from overriding MailerLite's
+   injected form elements inside .ml-embedded
+   ═══════════════════════════════════════════════════════ */
+
+/* Wrapper sizing */
+.sn-ml-wrap {
+    max-width: 340px;
+}
+
+/* Reset our input styles inside the ML container */
+.ml-embedded input,
+.ml-embedded input[type="email"],
+.ml-embedded input[type="text"],
+.ml-embedded button,
+.ml-embedded textarea {
+    all: revert;
+    font-family: var(--font-main);
+}
+
+/* Ensure the ML form block isn't clipped or hidden */
+.ml-embedded {
+    display: block;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+}
