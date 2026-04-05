@@ -62,18 +62,14 @@
           <p>A mix of classical, popular and original pieces — arranged by Joanna specifically for her students. Suitable for beginner to intermediate players.</p>
 
           <div class="signup-box" style="margin-top:1.5rem;">
-            <form onsubmit="event.preventDefault(); handleSignup(this);" novalidate>
-              <span class="signup-box__label">GET YOUR FREE PIECES</span>
-              <input type="email"
-                     name="email"
-                     placeholder="Your email address"
-                     required
-                     autocomplete="email">
-              <button type="submit" class="btn btn-navy btn-full">
-                Subscribe &amp; Download Free →
-              </button>
-              <span class="signup-box__note">No spam. Unsubscribe anytime. We'll occasionally send new pieces too.</span>
-            </form>
+            <div class="ml-embedded" data-form="8EOALI"></div>
+            <noscript>
+              <p style="font-size:.75rem;color:var(--color-grey);">
+                Please enable JavaScript to use the sign-up form, or email us at
+                <a href="mailto:simplynotes.co.uk@gmail.com">simplynotes.co.uk@gmail.com</a>
+                to receive the free pieces directly.
+              </p>
+            </noscript>
           </div>
 
           <!-- Already have pieces note -->
@@ -112,5 +108,12 @@
 <script src="/assets/js/components.js"></script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/site.js"></script>
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+n.parentNode.insertBefore(l,n);})(window,document,'script',
+'https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '183767706205423187');
+</script>
 </body>
 </html>
