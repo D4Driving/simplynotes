@@ -9,13 +9,13 @@
 
   /* ── Navigation links ────────────────────────────── */
   const NAV_LINKS = [
-    { href: '/',                 label: 'Home' },
-    { href: '/about',            label: 'About' },
-    { href: '/sheet-music',      label: 'Sheet Music' },
-    { href: '/music-downloads',  label: 'Music Downloads' },
-    { href: '/books',            label: 'Books' },
-    { href: '/free-downloads',   label: 'Free Downloads' },
-    { href: '/contact',          label: 'Contact' },
+    { href: './index.html',                 label: 'Home' },
+    { href: './about.html',            label: 'About' },
+    { href: './sheet-music.html',      label: 'Sheet Music' },
+    { href: './music-downloads.html',  label: 'Music Downloads' },
+    { href: './books.html',            label: 'Books' },
+    { href: './free-downloads.html',   label: 'Free Downloads' },
+    { href: './contact.html',          label: 'Contact' },
   ];
 
   const LOGO_SVG = `
@@ -42,7 +42,7 @@
     return `
       <header class="site-header">
         <div class="container">
-          <a href="/" class="site-logo" aria-label="SimplyNotes — Home">
+          <a href="./index.html" class="site-logo" aria-label="SimplyNotes — Home">
             <div class="site-logo__icon">${LOGO_SVG}</div>
             <div class="site-logo__text">
               <span class="site-logo__name">SimplyNotes</span>
@@ -51,7 +51,7 @@
           </a>
           <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
             ${links}
-            <a href="/sheet-music" class="btn btn-red">Shop Now</a>
+            <a href="./sheet-music.html" class="btn btn-red">Shop Now</a>
           </nav>
           <button class="nav-toggle" id="nav-toggle"
                   aria-controls="primary-nav" aria-expanded="false"
@@ -81,7 +81,7 @@
         <div class="container">
           <div class="footer__top">
             <div class="footer__brand">
-              <a href="/" class="footer__logo" aria-label="SimplyNotes Home">
+              <a href="./index.html" class="footer__logo" aria-label="SimplyNotes Home">
                 ${FOOTER_LOGO_SVG}
                 <div>
                   <span class="footer__logo-name">SimplyNotes</span>
@@ -115,26 +115,26 @@
             <div class="footer__col">
               <span class="footer__col-title">Shop</span>
               <ul>
-                <li><a href="/sheet-music">PDF Books</a></li>
-                <li><a href="/music-downloads">Music Downloads</a></li>
-                <li><a href="/free-downloads">Free Downloads</a></li>
-                <li><a href="/sheet-music">Exam Pieces</a></li>
+                <li><a href="./sheet-music.html">PDF Books</a></li>
+                <li><a href="./music-downloads.html">Music Downloads</a></li>
+                <li><a href="./free-downloads.html">Free Downloads</a></li>
+                <li><a href="./sheet-music.html">Exam Pieces</a></li>
               </ul>
             </div>
             <div class="footer__col">
               <span class="footer__col-title">Levels</span>
               <ul>
-                <li><a href="/sheet-music">Beginner</a></li>
-                <li><a href="/sheet-music">Elementary</a></li>
-                <li><a href="/sheet-music">Intermediate</a></li>
-                <li><a href="/sheet-music">Advanced</a></li>
+                <li><a href="./sheet-music.html">Beginner</a></li>
+                <li><a href="./sheet-music.html">Elementary</a></li>
+                <li><a href="./sheet-music.html">Intermediate</a></li>
+                <li><a href="./sheet-music.html">Advanced</a></li>
               </ul>
             </div>
             <div class="footer__col">
               <span class="footer__col-title">Joanna</span>
               <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/books">Amazon Books</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./books.html">Amazon Books</a></li>
                 <li><a href="https://www.youtube.com/@galemea" target="_blank" rel="noopener noreferrer">YouTube</a></li>
                 <li><a href="https://open.spotify.com/artist/0c6MjycQm4zUPJJF3plDsj" target="_blank" rel="noopener noreferrer">Spotify</a></li>
               </ul>
@@ -144,8 +144,8 @@
               <ul>
                 <li><a href="mailto:simplynotes.co.uk@gmail.com">simplynotes.co.uk@gmail.com</a></li>
                 <li><a href="tel:+447595923805">+44 7595 923 805</a></li>
-                <li><a href="/contact">Contact form</a></li>
-                <li><a href="/contact">Store Policy</a></li>
+                <li><a href="./contact.html">Contact form</a></li>
+                <li><a href="./contact.html">Store Policy</a></li>
               </ul>
             </div>
           </div>
