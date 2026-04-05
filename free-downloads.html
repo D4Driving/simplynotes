@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download 5 free piano sheet music pieces by Joanna Bernat — Right Here Waiting, You Raise Me Up, Never Gonna Give You Up, Minuet in G, and Tango II.">
+  <title>5 Free Sheet Music Downloads — SimplyNotes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+
+<div id="sn-header"></div>
+
+<main id="main-content">
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">For Teachers &amp; Students</span>
+      <h1>5 Free Sheet Music Downloads</h1>
+      <p>Subscribe once — download all 5 pieces instantly, straight to your inbox</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section--sand" style="padding-bottom:0;">
+    <div class="container">
+      <div class="free-how">
+        <div class="free-how__step">
+          <div class="free-how__num">1</div>
+          <div class="free-how__title">Enter your email</div>
+          <div class="free-how__desc">Fill in the form below — no spam, ever</div>
+        </div>
+        <div class="free-how__step">
+          <div class="free-how__num">2</div>
+          <div class="free-how__title">Check your inbox</div>
+          <div class="free-how__desc">We'll send 5 PDF download links straight away</div>
+        </div>
+        <div class="free-how__step">
+          <div class="free-how__num">3</div>
+          <div class="free-how__title">Start playing</div>
+          <div class="free-how__desc">Print or use on a tablet — A4, clear notation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content: sign-up + pieces -->
+  <section class="section section--sand" style="padding-top:1.5rem;">
+    <div class="container">
+      <div class="free-downloads__inner">
+
+        <!-- Sign-up form -->
+        <div class="free-downloads__copy">
+          <span class="section-tag">Unlock All 5 Pieces</span>
+          <h2 style="font-size:1.375rem;">Subscribe &amp; Download</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+          <p>A mix of classical, popular and original pieces — arranged by Joanna specifically for her students. Suitable for beginner to intermediate players.</p>
+
+          <div class="signup-box" style="margin-top:1.5rem;">
+            <form onsubmit="event.preventDefault(); handleSignup(this);" novalidate>
+              <span class="signup-box__label">GET YOUR FREE PIECES</span>
+              <input type="email"
+                     name="email"
+                     placeholder="Your email address"
+                     required
+                     autocomplete="email">
+              <button type="submit" class="btn btn-navy btn-full">
+                Subscribe &amp; Download Free →
+              </button>
+              <span class="signup-box__note">No spam. Unsubscribe anytime. We'll occasionally send new pieces too.</span>
+            </form>
+          </div>
+
+          <!-- Already have pieces note -->
+          <p style="margin-top:1.25rem;font-size:.6875rem;color:var(--color-grey);">
+            Already subscribed? Check your inbox — the download email was sent when you first signed up.
+            If you can't find it, <a href="/contact" style="color:var(--color-red);">contact us</a> and we'll resend it.
+          </p>
+        </div>
+
+        <!-- The 5 pieces -->
+        <div class="free-downloads__list" id="free-pieces-list">
+          <!-- Rendered by shop.js -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Want more? -->
+  <section class="section section--ivory">
+    <div class="container" style="text-align:center;">
+      <span class="section-tag">Enjoyed These?</span>
+      <h2>Browse the Full Collection</h2>
+      <p style="max-width:400px;margin:.5rem auto 1.5rem;">Hundreds more pieces available as instant PDF downloads — from £3.20 per book.</p>
+      <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/sheet-music" class="btn btn-red">Shop Sheet Music</a>
+        <a href="/music-downloads" class="btn btn-outline">Audio Downloads</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="sn-footer"></div>
+
+<script src="/assets/js/components.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

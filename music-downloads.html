@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download original piano music recordings by Joanna Bernat. Free and paid MP3 audio files — hear the music before you buy the sheet music.">
+  <title>Music Downloads — SimplyNotes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+
+<div id="sn-header"></div>
+
+<main id="main-content">
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">Listen &amp; Download</span>
+      <h1>Music Downloads</h1>
+      <p>Original recordings of Joanna's compositions — MP3 downloads, free and paid</p>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+
+      <!-- Info strip -->
+      <div style="display:flex;gap:2rem;margin-bottom:2.25rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:.625rem;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--color-green-text);flex-shrink:0;"></div>
+          <span style="font-size:.75rem;font-weight:600;color:var(--color-grey);">Free tracks — no sign-up needed</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.625rem;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--color-gold);flex-shrink:0;"></div>
+          <span style="font-size:.75rem;font-weight:600;color:var(--color-grey);">Paid tracks — £1.50 each, instant delivery</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.625rem;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--color-navy);flex-shrink:0;"></div>
+          <span style="font-size:.75rem;font-weight:600;color:var(--color-grey);">MP3 format · High quality 320kbps</span>
+        </div>
+      </div>
+
+      <!-- Track list -->
+      <div class="audio-list" id="audio-list">
+        <!-- Loading state -->
+        <div style="text-align:center;padding:3rem;color:var(--color-grey);">Loading tracks…</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Listen free on Spotify -->
+  <section class="section section--navy">
+    <div class="container" style="display:flex;gap:3rem;align-items:center;flex-wrap:wrap;">
+      <div style="flex:1;min-width:240px;">
+        <span class="section-tag">Also on Streaming</span>
+        <h2 style="color:#EDE8F8;">Listen free on Spotify</h2>
+        <p style="color:#9090C0;margin-top:.5rem;max-width:380px;">Stream Joanna's full catalogue on Spotify — including pieces not available as downloads. Perfect for listening while you practise.</p>
+        <div style="display:flex;gap:.75rem;margin-top:1.5rem;flex-wrap:wrap;">
+          <a href="https://open.spotify.com/artist/0c6MjycQm4zUPJJF3plDsj"
+             class="btn btn-red"
+             target="_blank" rel="noopener noreferrer">
+            Open in Spotify
+          </a>
+          <a href="https://www.youtube.com/@galemea"
+             class="btn btn-outline-light"
+             target="_blank" rel="noopener noreferrer">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+      <div style="display:flex;gap:1rem;flex-shrink:0;">
+        <svg width="56" height="56" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="20" fill="#1DB954"/>
+          <path d="M28.4 27.2c-.3 0-.6-.1-.8-.3-4-2.4-9-3-14.8-1.6-.6.1-1.1-.2-1.2-.8-.1-.6.2-1.1.8-1.2 6.3-1.5 11.9-.8 16.4 1.8.5.3.7.9.4 1.4-.2.4-.5.7-.8.7zm1.7-4.1c-.4 0-.7-.2-1-.4-4.6-2.8-11.5-3.6-16.9-2-.6.2-1.3-.2-1.5-.8-.2-.6.2-1.3.8-1.5 6.2-1.9 13.7-1 19 2.3.5.3.7 1 .4 1.5-.2.6-.5.9-.8.9zm.2-4.2C24.7 15.6 16.5 15.3 11 16.8c-.8.2-1.7-.2-1.9-1.1-.2-.8.2-1.7 1.1-1.9 6.3-1.8 15.8-1.4 22 2.3.7.4 1 1.4.5 2.1-.4.7-1.4.9-2.4.7z" fill="white"/>
+        </svg>
+        <svg width="56" height="40" viewBox="0 0 44 32" aria-hidden="true">
+          <rect width="44" height="32" rx="7" fill="#FF0000"/>
+          <path d="M18 9L32 16L18 23V9Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="sn-footer"></div>
+
+<script src="/assets/js/components.js"></script>
+<script src="/assets/js/main.js"></script>
+<script>
+/* Render the full audio list as rows (not cards) on this page */
+document.addEventListener('DOMContentLoaded', async function () {
+  const list = document.getElementById('audio-list');
+  if (!list) return;
+
+  try {
+    const res     = await fetch('/_data/products.json');
+    const data    = await res.json();
+    const tracks  = data.audio || [];
+    const colours = ['#EEE8F4', '#EEF4EE', '#FFF0E8', '#E8F2F8', '#F8ECF4'];
+
+    list.innerHTML = tracks.map((t, i) => `
+      <div class="audio-row">
+        <div class="audio-row__num">${String(i + 1).padStart(2, '0')}</div>
+        <div class="audio-row__icon" style="background:${colours[i % colours.length]}">
+          <svg width="10" height="12" viewBox="0 0 12 14" fill="var(--color-navy)"><path d="M2 1l9 6-9 6V1z"/></svg>
+        </div>
+        <div class="audio-row__info">
+          <div class="audio-row__title">${t.title}</div>
+          <div class="audio-row__meta">${t.book} · MP3</div>
+        </div>
+        <div class="audio-row__right">
+          <span class="audio-row__dur">${t.duration}</span>
+          ${t.free
+            ? '<span class="badge-free">FREE</span>'
+            : `<span class="badge-price">${t.price_display}</span>`
+          }
+          <button class="btn btn-red"
+                  onclick="buyProduct('${t.id}', this)"
+                  style="padding:.4rem .875rem;font-size:.5625rem">
+            Download
+          </button>
+        </div>
+      </div>`).join('');
+  } catch (err) {
+    list.innerHTML = '<p style="text-align:center;color:var(--color-grey);padding:2rem;">Could not load tracks. Please refresh.</p>';
+  }
+});
+</script>
+</body>
+</html>
