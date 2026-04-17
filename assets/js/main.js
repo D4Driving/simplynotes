@@ -1,53 +1,51 @@
 /**
  * SimplyNotes — main.js
- * Mobile nav, scroll-reveal animations
+ * Scroll-reveal animations and shared utilities
  */
 
 (function () {
   'use strict';
 
-  document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * Initialize scroll-reveal animations for elements
+   * @param {string[]} selectors - CSS selectors to animate
+   * @param {Object} options - Animation options
+   */
+  function initScrollReveal(selectors = ['.product-card', '.audio-card', '.watch-card', '.free-piece', '.book-card', '.stat'], options = {}) {
+    const {
+      translateY = 18,
+      duration = 450,
+      threshold = 0.1
+    } = options;
 
-    /* ── Mobile nav toggle ──────────────────────────── */
-    const toggle = document.getElementById('nav-toggle');
-    const nav    = document.getElementById('primary-nav');
+    if (!('IntersectionObserver' in window)) return;
 
-    if (toggle && nav) {
-      toggle.addEventListener('click', function () {
-        const open = nav.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', String(open));
-      });
-      document.addEventListener('click', function (e) {
-        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-          nav.classList.remove('is-open');
-          toggle.setAttribute('aria-expanded', 'false');
+    const style = document.createElement('style');
+    style.textContent = `.reveal{opacity:0;transform:translateY(${translateY}px);transition:opacity ${duration}ms ease,transform ${duration}ms ease}.reveal.visible{opacity:1;transform:none}`;
+    document.head.appendChild(style);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
-    }
+    }, { threshold });
 
-    /* ── Scroll-reveal ──────────────────────────────── */
-    if ('IntersectionObserver' in window) {
-      const style       = document.createElement('style');
-      style.textContent = '.reveal{opacity:0;transform:translateY(18px);transition:opacity .45s ease,transform .45s ease}.reveal.visible{opacity:1;transform:none}';
-      document.head.appendChild(style);
+    document.querySelectorAll(selectors.join(', ')).forEach((el) => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  }
 
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
+  // Expose to global scope for other modules
+  window.SimplyNotesUtils = {
+    initScrollReveal
+  };
 
-      document.querySelectorAll(
-        '.product-card, .audio-card, .watch-card, .free-piece, .book-card, .stat'
-      ).forEach(function (el) {
-        el.classList.add('reveal');
-        observer.observe(el);
-      });
-    }
-
+  document.addEventListener('DOMContentLoaded', () => {
+    initScrollReveal();
   });
 
 })();
